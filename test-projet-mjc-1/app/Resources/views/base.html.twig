@@ -2,12 +2,19 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Test-Projet-MJC{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/admin.css')}}">
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+        <div class="user btn btn-lg">
+          <span class="glyphicon glyphicon-user disable"></span>
+        {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
