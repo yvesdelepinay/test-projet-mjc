@@ -10,15 +10,15 @@
                 <td>{{ user.id }}</td>
             </tr>
             <tr>
-                <th>Username</th>
+                <th>Pseudo</th>
                 <td>{{ user.username }}</td>
             </tr>
             <tr>
-                <th>Firstname</th>
+                <th>Prénom</th>
                 <td>{{ user.firstname }}</td>
             </tr>
             <tr>
-                <th>Lastname</th>
+                <th>Nom</th>
                 <td>{{ user.lastname }}</td>
             </tr>
             <tr>
@@ -26,35 +26,33 @@
                 <td>{{ user.email }}</td>
             </tr>
             <tr>
-                <th>Password</th>
-                <td>{{ user.password }}</td>
-            </tr>
-            <tr>
-                <th>Birthat</th>
-                <td>{% if user.birthAt %}{{ user.birthAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <th>Date de naissance</th>
+                <td>{% if user.birthAt %}{{ user.birthAt|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Role</th>
                 <td>{{ user.role }}</td>
             </tr>
             <tr>
-                <th>Isactive</th>
-                <td>{% if user.isActive %}Yes{% else %}No{% endif %}</td>
+                <th>Actif</th>
+                <td>{% if user.isActive %}Oui{% else %}Non{% endif %}</td>
             </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('user_index') }}">Back to the list</a>
+            <a class="btn btn-primary" href="{{ path('user_index') }}">Retour à la liste</a>
         </li>
         <li>
-            <a href="{{ path('user_edit', { 'id': user.id }) }}">Edit</a>
+            <a class="btn btn-warning" href="{{ path('user_edit', { 'id': user.id }) }}">Modifier</a>
         </li>
         <li>
+			{% if is_granted('ROLE_ADMIN') %}
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input class="btn btn-delete" type="submit" value="Supprimer">
             {{ form_end(delete_form) }}
+			{% endif %}
         </li>
     </ul>
 {% endblock %}
