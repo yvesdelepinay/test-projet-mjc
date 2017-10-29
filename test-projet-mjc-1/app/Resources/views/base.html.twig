@@ -2,15 +2,20 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+<<<<<<< HEAD
         <title>{% block title %}LA FABRIQUE{% endblock %}</title>
+=======
+        <title>{% block title %}Test-Projet-MJC{% endblock %}</title>
+>>>>>>> parent of e1f76fe... added a security controller, css in web, and fullfilled base.html.twig
         {% block stylesheets %}{% endblock %}
-        <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:400,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="icon" type="image/x-icon" href="{{ asset('fabrique.ico') }}" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="{{ asset('css/app.css')}}">
         <link rel="stylesheet" href="{{ asset('css/admin.css')}}">
     </head>
     <body>
+<<<<<<< HEAD
       <header>
 		  {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 		<div class="user btn btn-lg">
@@ -92,6 +97,12 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+=======
+        {% block body %}
+        <div class="user btn btn-lg">
+          <span class="glyphicon glyphicon-user disable"></span>
+        {% endblock %}
+>>>>>>> parent of e1f76fe... added a security controller, css in web, and fullfilled base.html.twig
         {% block javascripts %}{% endblock %}
     </body>
 </html>
