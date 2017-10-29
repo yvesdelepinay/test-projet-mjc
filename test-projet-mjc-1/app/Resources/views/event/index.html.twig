@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Liste des événements</h1>
+    <h1>Events list</h1>
 
     <table>
         <thead>
@@ -21,10 +21,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a class="btn btn-primary" href="{{ path('event_show', { 'id': event.id }) }}">show</a>
+                            <a href="{{ path('event_show', { 'id': event.id }) }}">show</a>
                         </li>
                         <li>
-                            <a class="btn btn-warning" href="{{ path('event_edit', { 'id': event.id }) }}">edit</a>
+                            <a href="{{ path('event_edit', { 'id': event.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -35,7 +35,7 @@
 
     <ul>
         <li>
-            <a class="btn btn-success" href="{{ path('event_new') }}">Créer un nouvel événement</a>
+            <a href="{{ path('event_new') }}">Create a new event</a>
         </li>
     </ul>
 {% endblock %}
